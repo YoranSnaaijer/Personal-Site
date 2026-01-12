@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, #000000, #800020);
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+}
+h1 {
+    color: white;
+}
+.links {
+    margin-top: 30px;
+}
+.links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.links a:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
