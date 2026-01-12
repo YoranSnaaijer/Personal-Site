@@ -1,27 +1,110 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(to bottom, #000000, #800020);
     color: white;
-    margin: 0;
     min-height: 100vh;
 }
-h1 {
-    color: white;
+
+#intro {
+    text-align: center;
+    padding: 100px 50px;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.links {
-    margin-top: 30px;
+
+#intro h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
 }
-.links a {
+
+#intro p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.buttons a {
     display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
 }
-.links a:hover {
+
+.buttons a:hover {
     background-color: rgba(255, 255, 255, 1);
+}
+
+.buttons.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    z-index: 1000;
+    justify-content: center;
+}
+
+#timeline {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#timeline h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.timeline-container {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.timeline-item {
+    flex-shrink: 0;
+    width: 300px;
+    margin-right: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #800020;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Modern version */
+}
+
+.timeline-item .date {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    white-space: normal;
+}
+
+.timeline-item .content h3 {
+    margin: 0 0 10px 0;
+    white-space: normal;
+}
+
+.timeline-item .content p {
+    margin: 0;
+    white-space: normal;
 }
